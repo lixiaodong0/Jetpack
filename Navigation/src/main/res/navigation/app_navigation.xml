@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/home_dest">
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="com.lixd.navigation.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/next_action_login_dest"
+            app:destination="@id/login_dest" />
+        <action
+            android:id="@+id/next_action_register_dest"
+            app:destination="@id/register_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/login_dest"
+        android:name="com.lixd.navigation.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment">
+
+        <argument
+            android:name="phone"
+            android:defaultValue="123"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            android:defaultValue="123"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_login_dest_self"
+            app:popUpTo="@+id/home_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/register_dest"
+        android:name="com.lixd.navigation.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/register_fragment">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/login_dest" />
+    </fragment>
+</navigation>
