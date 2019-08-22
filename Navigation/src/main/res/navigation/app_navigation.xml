@@ -42,4 +42,13 @@
             android:id="@+id/next_action"
             app:destination="@id/login_dest" />
     </fragment>
+    <!---->
+    <fragment
+        android:id="@+id/settings_dest"
+        android:name="com.lixd.navigation.SettingsFragment"
+        android:label="SettingsFragment" />
+  <!--  <activity
+        android:id="@+id/settings_dest"
+        android:name="com.lixd.navigation.BottomNavViewActivity"
+        android:label="SettingsFragment" />-->
 </navigation>

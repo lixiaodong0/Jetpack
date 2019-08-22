@@ -1,10 +1,10 @@
 package com.lixd.navigation
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.home_fragment.*
@@ -44,7 +44,7 @@ class HomeFragment : Fragment() {
 
         btnRegisterDest.setOnClickListener {
 
-            //            Navigation.findNavController(it).navigate(R.id.register_dest, null, registerOptions)\
+            //                        Navigation.findNavController(it).navigate(R.id.register_dest, null, registerOptions)
             val nextAction = HomeFragmentDirections.nextActionRegisterDest()
             Navigation.findNavController(it).navigate(nextAction)
         }

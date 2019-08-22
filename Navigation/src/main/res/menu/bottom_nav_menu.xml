@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/home_dest"
+        android:icon="@mipmap/ic_launcher"
+        android:title="首页" />
+
+    <item
+        android:id="@+id/settings_dest"
+        android:icon="@mipmap/ic_launcher"
+        android:title="测试" />
+</menu>
