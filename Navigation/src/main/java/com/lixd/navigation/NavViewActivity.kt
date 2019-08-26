@@ -40,11 +40,7 @@ class NavViewActivity : AppCompatActivity() {
 
         navController.navigate(R.id.settings_dest)
     }
-
-
     override fun onSupportNavigateUp(): Boolean {
         return findNavController(R.id.my_nav_host_fragment).navigateUp(appBarConfiguration!!)
     }
-
-
 }

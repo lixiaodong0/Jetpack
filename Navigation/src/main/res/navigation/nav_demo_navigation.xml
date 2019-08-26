@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_demo_navigation"
+    app:startDestination="@id/step_one_dest">
+
+    <fragment
+        android:id="@+id/step_one_dest"
+        android:name="com.lixd.navigation.example.StepOneFragment"
+        android:label="StepOneFragment"
+        tools:layout="@layout/step_one_fragment">
+        <action
+            android:id="@+id/to_two_dest_action"
+            app:destination="@id/step_two_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/step_two_dest"
+        android:name="com.lixd.navigation.example.StepTwoFragment"
+        android:label="StepTwoFragment"
+        tools:layout="@layout/step_two_fragment">
+        <action
+            android:id="@+id/to_three_dest_action"
+            app:destination="@id/step_three_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/step_three_dest"
+        android:name="com.lixd.navigation.example.StepThreeFragment"
+        android:label="StepThreeFragment"
+        tools:layout="@layout/step_three_fragment">
+
+        <action
+            android:id="@+id/to_three_dest_action"
+            app:destination="@id/step_three_dest" />
+        <action
+            android:id="@+id/to_one_dest_action"
+            app:popUpTo="@id/step_one_dest" />
+    </fragment>
+</navigation>

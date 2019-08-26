@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
     android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="第三个页面"
+        android:textSize="30sp" />
 
     <Button
-        android:id="@+id/btn_to_navigation"
+        android:id="@+id/btn_open_default_mode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Navigation基本用法"
-        android:textAllCaps="false" />
+
+        android:text="打开自己" />
 
     <Button
-        android:id="@+id/btn_to_navigation_ui"
+        android:id="@+id/btn_open_top_mode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="使用NavigationUI简化菜单，底部导航，抽屉配置"
-        android:textAllCaps="false" />
+        android:text="配置栈顶模式，打开自己" />
 
     <Button
-        android:id="@+id/btn_to_deep_link"
+        android:id="@+id/btn_back_stop_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DeepLink用法"
-        android:textAllCaps="false" />
+        android:text="回到第一个页面" />
 </LinearLayout>
