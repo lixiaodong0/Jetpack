@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.lixd.navigation.example.NavDemoActivity
+import com.lixd.navigation.ui.MenuDemoActivity
 
 /**
  * Navigation官方使用教程
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btn_to_navigation_ui).setOnClickListener {
-
+            startActivity(Intent(MainActivity@ this, MenuDemoActivity::class.java))
         }
 
         findViewById<Button>(R.id.btn_to_deep_link).setOnClickListener {

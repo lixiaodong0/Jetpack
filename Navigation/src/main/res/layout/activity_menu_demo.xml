@@ -4,17 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.MenuDemoActivity">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary" />
+        android:background="@color/colorPrimary"
+        app:title="测试Toolbar菜单"
+        app:titleTextColor="@android:color/white" />
 
+    <!--
+    android:name="androidx.navigation.fragment.NavHostFragment" //容器
+    app:defaultNavHost="true" //true 代理系统返回键
+    app:navGraph="@navigation/nav_demo_navigation"  //fragment清单列表
+  -->
     <fragment
+        android:id="@+id/my_nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-
-        android:layout_height="match_parent" />
-
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_demo_navigation" />
 </LinearLayout>

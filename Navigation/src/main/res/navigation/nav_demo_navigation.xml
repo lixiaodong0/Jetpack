@@ -29,6 +29,11 @@
         android:label="StepThreeFragment"
         tools:layout="@layout/step_three_fragment">
 
+        <argument
+            android:name="name"
+            android:defaultValue="123"
+            app:argType="string" />
+
         <action
             android:id="@+id/to_three_dest_action"
             app:destination="@id/step_three_dest" />

@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.lixd.navigation.BaseFragment
 import com.lixd.navigation.R
 
@@ -16,6 +18,11 @@ class StepThreeFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val safeArgs: StepThreeFragmentArgs by navArgs()
+
+        view.findViewById<TextView>(R.id.tv_args).text = "接受参数:[name:${safeArgs.name},key:${arguments?.getString("key")}]"
+
         view.findViewById<Button>(R.id.btn_open_default_mode).setOnClickListener {
             //用默认的模式打开自己
             findNavController().navigate(R.id.to_three_dest_action)
